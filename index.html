@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OvO Game</title>
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+}
+#game-container {
+  width: 100%;
+  height: 100%;
+}
+</style>
+</head>
+<body>
+
+<div id="game-container"></div>
+
+<!-- Load OvO game scripts -->
+<script type="module">
+  import Game from './src/main.js';
+
+  // Initialize the game inside the container
+  const container = document.getElementById('game-container');
+  const game = new Game(container);
+  game.start();
+</script>
+
+</body>
+</html>
